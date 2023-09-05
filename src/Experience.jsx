@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 
 const Experience = () => {
     useFrame((state, delta) => {
-        boxRef.current.rotation.x += 1 * delta;
+        boxRef.current.rotation.y += 1 * delta;
     });
 
     const boxRef = useRef();
@@ -13,9 +13,9 @@ const Experience = () => {
     <OrbitControls makeDefault />
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={2} />
-        <mesh ref={boxRef}>
+        <mesh position={[0, 0, 1]} ref={boxRef}>
             <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="orange" />
+            <meshStandardMaterial color="Tomato" />
         </mesh>
     </>
 }
