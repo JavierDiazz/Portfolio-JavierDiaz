@@ -1,25 +1,23 @@
 import { OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import Bee from "./World/Bee";
+import { Tree } from "./World/Tree";
+import { WoodenFence } from "./World/WoodenFence";
 
 const Experience = () => {
-    useFrame((state, delta) => {
-        boxRef.current.rotation.y += 1 * delta;
-    });
-
-    const boxRef = useRef();
-    console.log(boxRef.current);
-    return <>
-    <OrbitControls makeDefault />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={2} />
-        <mesh position={[0, 0, 1]} ref={boxRef}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color="Tomato" />
-        </mesh>
-    </>
+    return (
+        <>
+            <OrbitControls makeDefault />
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={2} />
+            <Bee />
+            <Tree position={[-2, -2, 2]} scale={0.04} />
+            <WoodenFence position={[0, -2, 0]} />
+            <mesh position-y={-2} rotation-x={-Math.PI / 2} >
+                <planeGeometry attach="geometry" args={[12, 12]} />
+                <meshStandardMaterial attach="material" color="Peru" />
+            </mesh>
+        </>
+    )
 }
+
 export default Experience;
-
-
-
