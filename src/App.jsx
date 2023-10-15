@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <>
-            <Info name={"Javier Díaz"} biography={"Web 3D Developer in Progress"} />
+            <Info name={"Javier E. Díaz"} biography={"Web 3D Spooky Experience"} />
             <Canvas
                 camera={cameraSettings}
             >
