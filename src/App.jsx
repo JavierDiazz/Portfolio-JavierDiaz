@@ -14,6 +14,7 @@ const App = () => {
             <Info name={"Javier E. Díaz"} biography={"Web 3D Spooky Experience"} />
             <Canvas
                 camera={cameraSettings}
+                shadows
             >
                 <Experience />
             </Canvas>

@@ -7,7 +7,7 @@ const Cat = () => {
     const catModel = useGLTF('/assets/models/cat/scene.gltf')
 
     return (
-        <mesh  ref={catRef} position={[3, -2.13, -2]} rotation-y={-Math.PI * 0.2} scale={0.004}>
+        <mesh  ref={catRef} position={[4.5, -2.13, -1.4]} rotation-y={-Math.PI * 0.2} scale={0.004} castShadow>
             <primitive object={catModel.scene} />
         </mesh>
     )

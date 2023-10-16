@@ -15,7 +15,7 @@ const Knight = () => {
 
 
     return (
-        <mesh ref={knightRef} position={[1, -0.85, 0]} rotation-y={-Math.PI * 0.15} scale={1.3}>
+        <mesh ref={knightRef} position={[1, -0.85, 0]} rotation-y={-Math.PI * 0.15} scale={1.3} castShadow>
             <primitive object={knightModel.scene} />
         </mesh>
     )
